@@ -5,7 +5,7 @@ import User from '../../components/user';
 
 import './fuzzy-search.sass';
 
-function MatchingResults({results}) {
+function MatchingResults({results, busy}) {
   
   const database = new Fuse(require("../../database/database.json"), {
     keys: ["name"],
@@ -17,15 +17,18 @@ function MatchingResults({results}) {
   });
   const data = database.search(results);
   return (
-    <div>
-      matching results for <code>{results}</code>:
-      <ul className="results-list">
-        { data.length > 0
-          ? data.map((x, i) => <li key={i}><User name={x.name} /></li>)
-          : <NoResults />
-        }
-      </ul>
-    </div>
+    busy
+      ? <div>busy...</div> 
+      : results &&
+      <div>
+        matching results for <code>{results}</code>:
+        <ul className="results-list">
+          { data.length > 0
+            ? data.map((x, i) => <li key={i}><User name={x.name} /></li>)
+            : <NoResults />
+          }
+        </ul>
+      </div>
   );
 }
 
