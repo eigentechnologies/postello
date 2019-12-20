@@ -2,6 +2,7 @@ import React from 'react';
 import Fuse from 'fuse.js';
 
 import User from '../../components/user';
+import Deadeater from '../../svg/deadeater-logo.svg';
 
 import './fuzzy-search.sass';
 
@@ -34,9 +35,7 @@ export default MatchingResults;
 function NoResults() {
   return(
   <div className="no-results">
-    <span role="img" aria-label="skeleton">
-    💀
-    </span>
+    <div style={{backgroundImage:`url(${Deadeater})`}} className="dead-eater" />
     <span>
       No results
     </span>

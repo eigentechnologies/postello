@@ -1,30 +1,66 @@
 .user-list-item
   background-color: hsl(180, 0, 100%)
-  // padding: 16px
-  border-radius: 4px
-  margin: 8px
+  border-radius: 8px
+  margin: 8px 24px
+  height: 56px
   box-shadow: 1px 1px 4px hsl(180, 0, 60%)
   display: flex
   justify-content: space-between
   align-items: center
+  padding-left: 16px
+  position: relative
 
-.user-name
-  background-color: hsl(180, 0, 90%)
-  display: flex
-  align-items: center
-  height: 32px
-  padding: 16px
-  width: 100%
-  font-weight: 600
+  .user-name
+    display: flex
+    align-items: center
 
-.user-action
-  font-size: 24px
-  background-color: hsl(190, 40%, 20%)
-  height: 100%
-  padding: 16px
-  cursor: pointer
+    .user-photo
+      width: 40px
+      height: 40px
+      min-width: 40px
+      min-height: 40px
+      overflow: hidden
+      border-radius: 50%
+      margin-right: 16px
 
-.user-photo
-  border-radius: 50%
-  max-width: 32px
-  margin-right: 8px
+      .img
+        width: 40px
+        height: 40px
+        background-repeat: no-repeat
+        background-position: center
+
+    span
+      font-size: 18px
+      font-weight: 800
+      width: 100%
+  
+  .envelope
+    width: 56px
+    height: 56px
+    min-width: 56px
+    min-height: 56px
+    // background-color: red
+    background-repeat: no-repeat
+    background-position: center
+    transform: scale(.6)
+
+// .user-name
+//   background-color: hsl(180, 0, 90%)
+//   display: flex
+//   align-items: center
+//   height: 32px
+//   padding: 16px
+//   width: 100%
+//   font-weight: 600
+
+// .user-action
+//   font-size: 24px
+//   background-color: hsl(190, 40%, 20%)
+//   height: 100%
+//   padding: 16px
+//   cursor: pointer
+
+// .user-photo
+//   border-radius: 50%
+//   max-width: 32px
+//   margin-right: 8px

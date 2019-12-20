@@ -1,17 +1,20 @@
 import React from 'react';
 
+import Envelope from '../../svg/envelope.svg'
+
 import './user.sass';
 
-function User({name}) {
+function User({name, photo}) {
   return(
     <div className="user-list-item">
       <span className="user-name">
-        <img className="user-photo" src={`https://i.pravatar.cc/32?img=${Math.floor(Math.random()*100)}`} />
-        {name}
+        <div className="user-photo">
+          {/* <img className="img" src={`https://i.pravatar.cc/32?img=${Math.floor(Math.random()*100)}`} /> */}
+          <img className="img" src={photo} />
+        </div>
+        <span>{name}</span>
       </span>
-      <span className="user-action" aria-label="envelope" role="img">
-        💬
-      </span>
+      <div style={{backgroundImage:`url(${Envelope})`}} className="envelope" />
     </div>
   )
 }
