@@ -5,28 +5,37 @@ import Camera, { FACING_MODES, IMAGE_TYPES } from "react-html5-camera-photo";
 import "react-html5-camera-photo/build/css/index.css";
 import { Tesseract } from "tesseract.ts";
 
+import { testImage } from './test.jpg';
+
+import MatchingResults from '../../Helpers/fuzzy-search';
 // import "./styles.css";
 
 function CameraPage() {
-  const [results, getResults] = useState("Results will appear here...");
+  const [results, getResults] = useState('');
+
+  const recognizeText = picture => {
+    Tesseract.create()
+    .recognize(picture)
+    .then(res => {
+      getResults("thinking...");
+      let text = res.text;
+      // getResults(`results: ${text}`);
+      console.log(text);
+      let data = text.split("'");
+      getResults(`${data}`);
+      console.log(data);
+    });
+  }
 
   const onTakePhoto = datauri => {
-    Tesseract.create()
-      .recognize(datauri)
-      .then(res => {
-        getResults("thinking...🤔");
-        let text = res.text;
-        // getResults(`results: ${text}`);
-        console.log(text);
-        let data = text.split("'");
-        getResults(`"clean" results: \n\n ${data}`);
-        console.log(data);
-      });
+    recognizeText(datauri)
   };
   return (
     <div>
       <TestCamera onTakePhoto={onTakePhoto} />
-      {results}
+      {/* {results} */}
+      <MatchingResults results={results} />
+
     </div>
   );
 }
