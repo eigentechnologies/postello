@@ -1,8 +1,13 @@
 import React from 'react';
 import Fuse from 'fuse.js';
 
+import User from '../../components/user';
+
+import './fuzzy-search.sass';
+
 function MatchingResults({results}) {
-  const database = new Fuse(require("./database.json"), {
+  
+  const database = new Fuse(require("../../database/database.json"), {
     keys: ["name"],
     shouldSort: true,
     threshold: 0.6,
@@ -14,9 +19,9 @@ function MatchingResults({results}) {
   return (
     <div>
       matching results for <code>{results}</code>:
-      <ul>
+      <ul className="results-list">
         { data.length > 0
-          ? data.map((x, i) => <li key={i}>{x.name}</li>)
+          ? data.map((x, i) => <li key={i}><User name={x.name} /></li>)
           : <NoResults />
         }
       </ul>

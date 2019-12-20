@@ -6,7 +6,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import CameraView from "./Views/camera";
 import WelcomeView from "./Views/welcome";
 
-import "./styles.css";
+import "./styles.sass";
 
 function App() {
   return (
