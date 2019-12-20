@@ -1,6 +1,6 @@
 .main
   width: 100%
-  height: calc(100vh - 20px)
+  height: 100vh
   background-color: white
   position: relative
   display: flex
@@ -31,13 +31,19 @@
       background-position: center
   
   .welcome-body
+    width: 200px
+    text-align: center
+    padding: 0 60px
     z-index: 1
+
     .quote
-      width: 120px
       text-align: center
       margin-bottom: 24px
+      font-weight: 600
+      font-size: 24px
 
     .welcome-link
+      margin: 0 auto
       width: 120px
       height: 120px
       background-repeat: no-repeat
@@ -47,13 +53,15 @@
   .welcome-footer
     z-index: 1
     width: 100%
+    height: fit-content
     text-align: center
+    margin-bottom: 24px
 
     span
-      margin-bottom: 16px
+      font-size: 12px
 
     .eigen-logo
-      margin: 0 auto
+      margin: 6px auto 0
       width: 170px
       height: 20px
       background-repeat: no-repeat
