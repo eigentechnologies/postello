@@ -7,7 +7,7 @@ import { Tesseract } from "tesseract.ts";
 
 import MatchingResults from '../../Helpers/fuzzy-search';
 import "./camera.sass";
-import Logo from '../../svg/postello-logo.svg';
+import Logo from '../../svg/edvige.svg';
 
 function CameraPage() {
   const [results, getResults] = useState('');
@@ -31,7 +31,7 @@ function CameraPage() {
     recognizeText(datauri)
   };
   return (
-    <div>
+    <div style={{height: '100vh'}}>
       <TestCamera onTakePhoto={onTakePhoto} />
       <MatchingResults busy={busy} results={results} />
 

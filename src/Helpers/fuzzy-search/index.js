@@ -4,6 +4,8 @@ import Fuse from 'fuse.js';
 import User from '../../components/user';
 import Deadeater from '../../svg/deadeater-logo.svg';
 
+import Busy from '../../components/busy';
+
 import './fuzzy-search.sass';
 
 function MatchingResults({results, busy}) {
@@ -19,10 +21,11 @@ function MatchingResults({results, busy}) {
   const data = database.search(results);
   return (
     busy
-      ? <div>busy...</div> 
+      ? <Busy />
       : results &&
       <div>
-        matching results for <code>{results}</code>:
+        {/* matching results for <code>{results}</code>: */}
+        <span className="title">Send notification to:</span>
         <ul className="results-list">
           { data.length > 0
             ? data.map((x, i) => <li key={i}><User name={x.name} /></li>)
