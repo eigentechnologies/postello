@@ -14,7 +14,7 @@ function MatchingResults({results, busy}) {
     keys: ["name"],
     shouldSort: true,
     threshold: 0.6,
-    distance: 100,
+    distance: 50,
     minMatchCharLength: 2,
     tokenize: true,
   });
