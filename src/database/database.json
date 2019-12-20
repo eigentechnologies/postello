@@ -1,3 +1,4 @@
+
 [
   {
     "name": "Gellert Grindelwald"
@@ -13,5 +14,80 @@
   },
   {
     "name": "Tom Marvolo Riddle"
+  },
+  {
+    "name": "Phineas Nigellus Black"
+  },
+  {
+    "name": "Sirius Black"
+  },
+  {
+    "name": "Cho Chang"
+  },
+  {
+    "name": "Albus Dumbledore"
+  },
+  {
+    "name": "Aberforth Dumbledore"
+  },
+  {
+    "name": "Vernon Dursley"
+  },
+  {
+    "name": "Petunia Dursley"
+  },
+  {
+    "name": "Seamus Finnigan"
+  },
+  {
+    "name": "Mundungus Fletcher"
+  },
+  {
+    "name": "Hermione Granger"
+  },
+  {
+    "name": "Rubeus Hagrid"
+  },
+  {
+    "name": "Ronald Weasley"
+  },
+  {
+    "name": "Viktor Krum"
+  },
+  {
+    "name": "Bellatrix Lestrange"
+  },
+  {
+    "name": "Neville Longbottom"
+  },
+  {
+    "name": "Xenophilius Lovegood"
+  },
+  {
+    "name": "Luna Lovegood"
+  },
+  {
+    "name": "Remus Lupin"
+  },
+  {
+    "name": "Narcissa Malfoy"
+  },
+  {
+    "name": "Garrick Ollivander"
+  },
+  {
+    "name": "Rita Skeeter"
+  },
+  {
+    "name": "Newt Scamander"
+  },
+  {
+    "name": "Nymphadora Tonks"
+  },
+  {
+    "name": "Dolores Umbridge"
+  },
+  {
+    "name": "Arthur Weasley"
   }
 ]
