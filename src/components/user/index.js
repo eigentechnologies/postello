@@ -10,7 +10,7 @@ function User({name, photo}) {
     <div className="user-list-item">
       <span className="user-name">
         <div className="user-photo">
-          <img className="img" src={url} />
+          <img className="img" src={url} alt="user profile" />
           {/* <img className="img" src={photo} /> */}
         </div>
         <span>{name}</span>
