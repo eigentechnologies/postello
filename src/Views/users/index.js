@@ -4,7 +4,7 @@ function UsersView() {
   const [isLoading, setIsLoading] = useState(true);
   const [users, setUsers] = useState([]);
   useEffect(() => {
-    fetch("http://0.0.0.0:5000/users", { method: "GET" })
+    fetch("http://0.0.0.0:5000/slackusers", { method: "GET" })
       .then(res => res.json())
       .then(response => {
         setIsLoading(false)
@@ -20,7 +20,10 @@ function UsersView() {
         ? 'loading users...'
         : (<ul>
         {users.map((user) => (
-          <li key={user.id}>{user.name}, <i>{user.email}</i></li>
+          <li key={user.id}>
+            <img src={user.img} alt="profile" />
+            {user.name}
+            </li>
         ))}
       </ul>)}
     </div>
