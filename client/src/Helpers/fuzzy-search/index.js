@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import Fuse from 'fuse.js';
 
 import User from '../../components/user';
 import Deadeater from '../../svg/deadeater-logo.svg';
@@ -9,29 +8,22 @@ import Busy from '../../components/busy';
 import './fuzzy-search.sass';
 
 function MatchingResults({results, busy}) {
-  const [isLoading, setIsLoading] = useState(true);
+  // const [isLoading, setIsLoading] = useState(true);
   const [users, setUsers] = useState([]);
-
-
   useEffect(() => {
     async function getUsers(){
-      const res = await fetch("http://0.0.0.0:5000/slackusers", { method: "GET" })
+      const res = await fetch(`http://0.0.0.0:5000/slackusers`, {
+        method: "POST",
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(results)
+      })
       const response = await res.json();
-        setIsLoading(false);
-        const database = new Fuse(response, {
-          keys: ["name"],
-          shouldSort: true,
-          threshold: 0.6,
-          distance: 50,
-          minMatchCharLength: 2,
-          tokenize: true,
-        });
-        const data = database.search(results);
-        console.log(data)
-        setUsers(data);
+      setUsers(response);
     }
-
-    getUsers()
+    
+    results && getUsers()
   }, [results])
   
   return (

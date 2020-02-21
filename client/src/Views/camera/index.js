@@ -10,20 +10,19 @@ import "./camera.sass";
 import Logo from '../../svg/edvige.svg';
 
 function CameraPage() {
-  const [results, getResults] = useState('');
-  const [busy, getBusy] = useState(false);
+  const [results, setResults] = useState('');
+  const [busy, setBusy] = useState(false);
 
   const recognizeText = picture => {
-    getBusy(true);
+    setBusy(true);
     Tesseract.create()
     .recognize(picture)
     .then(res => {
       let text = res.text;
-      console.log(text);
-      let data = text.split("'");
-      getBusy(false);
-      getResults(`${data}`);
-      console.log(data);
+      console.log('raw ocr data:', text);
+      setResults(text.split("'"));
+      setBusy(false);
+      console.log('ocr results:', results);
     });
   }
 
@@ -43,7 +42,7 @@ export default CameraPage;
 
 function TestCamera({ onTakePhoto }) {
   const onCameraStart = stream => {
-    console.log("start streaming...");
+    console.log("🎥 start streaming...");
   };
 
   const onCameraError = error => {
@@ -51,7 +50,7 @@ function TestCamera({ onTakePhoto }) {
   };
 
   const onCameraStop = () => {
-    console.log("stopping streaming...");
+    console.log("🛑stopping streaming...");
   };
 
   return (

@@ -9,7 +9,7 @@ function User({name, photo, id}) {
 
   async function sendMessage(id) {
     console.log(`sending message to...${id}`)
-    const res = await fetch(`http://0.0.0.0:5000/slack/${id}`, {method: "GET"})
+    // const res = await fetch(`http://0.0.0.0:5000/slack/${id}`, {method: "GET"})
   }
 
   return(
