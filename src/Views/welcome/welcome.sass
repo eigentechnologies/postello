@@ -1,6 +1,8 @@
 .main
   width: 100%
-  height: calc(100vh - 40px)
+  max-width: 600px
+  height: 100vh
+  margin: 0 auto
   background-color: white
   position: relative
   display: flex
@@ -8,32 +10,23 @@
   flex-direction: column
   justify-content: space-between
 
-  .header-bg
-    width: 100%
-    height: 100%
-    background-repeat: no-repeat
-    background-position: top
-    position: absolute
+  border: 1px solid red
 
   .welcome-header
     padding-top: 32px
-    width: 100%
-    height: 200px
-    display: flex
-    align-items: center
-    justify-content: center
     z-index: 1
 
     .header-logo
-      width: 160px
-      height: 160px
+      width: 60px
+      height: 60px
+      margin: 0 auto
       background-repeat: no-repeat
       background-position: center
   
   .welcome-body
     width: 200px
     text-align: center
-    padding: 0 60px
+    // padding: 0 60px
     z-index: 1
 
     .quote
@@ -52,17 +45,15 @@
 
   .welcome-footer
     z-index: 1
-    width: 100%
     height: fit-content
     text-align: center
-    margin-bottom: 24px
+    margin-bottom: 32px
 
     span
-      font-size: 12px
+      font-size: 8px
 
     .eigen-logo
-      margin: 6px auto 0
-      width: 170px
+      width: 120px
       height: 20px
       background-repeat: no-repeat
       background-position: top
