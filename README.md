@@ -1,4 +1,6 @@
-## Postello SErver
+# Postello
 
-- insert link to front-end repo
-- write documentation (APIs?)
+
+### Server
+
+- [ ] write documentation (APIs?)
