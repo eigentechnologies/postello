@@ -1,0 +1,29 @@
+.button
+  border-radius: 40px
+  padding: 12px 24px
+  position: relative !important
+  text-transform: uppercase
+  text-decoration: none
+  color: #446183
+  background-color: #fff
+  box-shadow: 1px 8px 8px rgba(black, .1)
+  border: 1px solid rgba(grey, .1)
+  transition: .25s
+
+  &:after
+    content: ''
+    border-radius: 40px
+    transition: .25s
+    position: absolute
+    top: 3px
+    left: 3px
+    width: calc(100% - 8px)
+    height: calc(100% - 8px)
+    border: 1px solid #446183
+  
+  &:hover,
+  &:focus
+    box-shadow: 2px 16px 16px rgba(black, .1)
+
+  &:active
+    box-shadow: 1px 8px 8px rgba(black, .2)
