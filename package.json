@@ -1,35 +1,22 @@
 {
-  "name": "react",
+  "name": "postello-server",
   "version": "1.0.0",
-  "description": "",
-  "keywords": [],
-  "main": "src/index.js",
+  "description": "Server for our internal app Postello, developed during Hackday!",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./index.js",
+    "dev": "nodemon ./index.js"
+  },
+  "author": "Eigen Technologies",
+  "license": "MIT",
   "dependencies": {
-    "fuse.js": "^3.4.6",
-    "node-sass": "^4.13.0",
-    "react": "16.12.0",
-    "react-dom": "16.12.0",
-    "react-html5-camera-photo": "1.5.4",
-    "react-measure": "^2.3.0",
-    "react-router-dom": "5.1.2",
-    "react-scripts": "3.0.1",
-    "tesseract.js": "1.0.19",
-    "tesseract.js-core": "1.0.2",
-    "tesseract.ts": "1.1.2"
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "node-fetch": "^2.6.0",
+    "slackbots": "^1.2.0"
   },
   "devDependencies": {
-    "typescript": "3.3.3"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
-  },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ]
+    "cors": "^2.8.5",
+    "nodemon": "^2.0.2"
+  }
 }
