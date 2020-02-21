@@ -74,14 +74,14 @@ app.post('/slackusers', (req, res) => {
     .then(x => res.send(fuzzyMatchUsers(req.body[0], refinedData(x))))
 })
 
-app.get('/slack/:id', (req, res) => {
-  const parames = {
+app.post('/slack/:id', (req, res) => {
+  const config = {
     icon_emoji: ':package:'
   };
   const id = req.params.id;
-  bot.postMessageToChannel('postello-hackday-test', `there is a parcel for ${id}!`, parames);
-  bot.postMessageToUser(id, 'there is a parcel for you!', parames);
-  res.send('sent!!')  
+  bot.postMessageToChannel('postello-hackday-test', `there is a parcel for ${id}!`, config);
+  bot.postMessageToUser(id, 'there is a parcel for you!', config);
+  res.send(`Slack message sent to ${id}`)  
 })
 
 // initialize server
