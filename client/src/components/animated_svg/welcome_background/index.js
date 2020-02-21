@@ -5,7 +5,7 @@ import './welcome_background.sass';
 const SvgWelcomeBackground = () => (
   <div className="animated-svg">
 
-    <svg  xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="500px" height="800px" viewBox="0 0 500 800">
+    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="500px" height="800px" viewBox="0 0 500 800">
     <linearGradient id="PSgrad_0" x1="70.711%" x2="0%" y1="70.711%" y2="0%">
       <stop offset="0%" stop-color="#94E69A" stop-opacity="1" />
       <stop offset="100%" stop-color="#17ADC9" stop-opacity="1" />

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 
 //TODO: we have to create the shortcut for the component folder
 import SvgWelcomeBackground from '../../components/animated_svg/welcome_background';
+import SvgWelcomePack from '../../components/animated_svg/welcome_pack';
 import Button from '../../components/button';
 
 import PostelloLogo from '../../svg/postello-logo.svg'
@@ -28,8 +29,10 @@ function WelcomeView() {
       <SvgWelcomeBackground />
       <div style={{backgroundImage:`url(${PostelloLogo})`}} className="postello-logo" />
 
-      
-      <Button linkTo="/camera" label="Press to continue" />
+      <div>
+        <SvgWelcomePack />
+        {/* <Button linkTo="/camera" label="Press to continue" /> */}
+      </div>
 
       <div className="welcome-footer">
         <span>Powered by</span>
